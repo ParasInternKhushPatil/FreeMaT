@@ -1,0 +1,39 @@
+INCLUDE_DIRECTORIES(levmar-2.3)
+
+IF( MSVC )
+  SET(LIBM_FILES 
+	 mathfunc.cpp
+	 mathfunc2.cpp
+	 mathfunc3.cpp
+	 mathfunc4.cpp
+  )
+ENDIF( MSVC )
+
+set(FN_SOURCES
+Interp1D.cpp 
+Interp2D.cpp 
+FNFun.cpp
+OptFun.cpp 
+mathfunc5.cpp
+)
+
+add_custom_command(
+	OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/Loader.cpp
+	DEPENDS ${FN_SOURCES}
+	COMMAND ${PYTHON_EXECUTABLE}
+	ARGS ${CMAKE_SOURCE_DIR}/tools/siggen.py ${CMAKE_CURRENT_SOURCE_DIR} FN ${CMAKE_CURRENT_BINARY_DIR} ${FN_SOURCES}
+	COMMENT "Generating function signatures"
+	VERBATIM
+	)
+
+ADD_LIBRARY( FN
+${FN_SOURCES}
+${CMAKE_CURRENT_BINARY_DIR}/Loader.cpp
+${LIBM_FILES}
+)
+
+ADD_SUBDIRECTORY(levmar-2.3)
+
+#SET_SOURCE_FILES_PROPERTIES( ${F_FILES} PROPERTIES HEADER_FILE_ONLY TRUE )
+SET_TARGET_PROPERTIES( FN PROPERTIES LINKER_LANGUAGE CXX )
+WRITE_OUT_ALL_VARIABLES()
