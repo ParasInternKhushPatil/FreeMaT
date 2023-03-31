@@ -35,17 +35,20 @@ At the moment, LLVM and CLANG do not install correctly in Fedora.  So
 you will have to build them.  Make a build directory somewhere.
 
 mkdir build
+
 cd build
 
 Create a subdirectory for the unfound dependencies (LLVM and CLANG in
 this case).  If you name it "deps", you won't have to change any variables later.
 
 mkdir deps
+
 cd deps
 
 Configure with the FreeMat dependencies script
 
 cmake <Path to freemat source>/tools/dependencies
+
 make
 
 This will download and build LLVM and CLANG into a local directory.
@@ -53,6 +56,7 @@ This will download and build LLVM and CLANG into a local directory.
 Then, from the "build" directory, do
 
 cmake <Path to freemat source>
+
 make
 
 And it should build.
@@ -71,10 +75,15 @@ yum install wine
 Build the dependencies
 
 mkdir build
+
 cd build
+
 mkdir deps
+
 cd deps
+
 cmake -DCMAKE_TOOLCHAIN_FILE=<Path to freemat
+
 source>/cmake/Toolchain-cross-mingw64-fedora-linux <path to freemat>/tools/dependencies
 
 ********************************************************************************
@@ -89,10 +98,15 @@ yum install mingw32-libffi-static mingw32-gcc-gfortran
 Build the dependencies
 
 mkdir build
+
 cd build
+
 mkdir deps
+
 cd deps
+
 cmake -DCMAKE_TOOLCHAIN_FILE=<Path to freemat
+
 source>/cmake/Toolchain-cross-mingw32-fedora-linux <path to freemat>/tools/dependencies
 
 ********************************************************************************
