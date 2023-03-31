@@ -2,9 +2,9 @@ General build instructions for:
 ----
 Mac: 
 
-```sh
 Do a checkout and build
 To build the dmg do
+```sh
 sudo /opt/local/bin/cpack -G DragNDrop CPackConfig.cmake
 ```
 Linux:
