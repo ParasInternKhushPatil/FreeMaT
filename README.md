@@ -2,7 +2,7 @@
 
 
 ### Installation of Python2 is necessary because it is based on Python 2 
-### Work in progress to shift python3
+### Work in progress to shift to python3
 Here are some general instructions on building FreeMat from scratch on
 various platforms. 
 
