@@ -15,7 +15,7 @@ yum install qt4 qt4-devel portaudio-devel atlas-devel atlas
 yum install ufsparse-devel fftw-devel llvm-devel pcre-devel gcc-c++ libffi-devel
 yum install ncurses-devel clang-devel rpm-build
 yum install arpack-devel lapack-devel
-
+```
 (this doesn't include VTK).
 
 Ubuntu:
