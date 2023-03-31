@@ -3,8 +3,7 @@
 
 ### Installation of Python2 is necessary because it is based on Python 2 
 ### Work in progress to shift to python3
-Here are some general instructions on building FreeMat from scratch on
-various platforms. 
+Here are some general instructions on building FreeMat from scratch on various platforms. 
 
 *******************************************************************************
 
@@ -18,12 +17,12 @@ yum install arpack-devel lapack-devel
 ```
 (this doesn't include VTK).
 
-Ubuntu:
+Ubuntu 20.04 :
 
 In Root: 
 ```sh
 apt install cmake
-sudo add-apt-repository ppa:rock-core/qt4  #for Ubuntu 20.04
+add-apt-repository ppa:rock-core/qt4  #for Ubuntu 20.04
 apt install qt4-dev-tools libqt4-dev 
 apt install portaudio19-dev/libasound-dev libatlas-base-dev libatlas3-base
 apt install libsuitesparse-dev libfftw3-dev llvm-dev libpcre3-dev libffi-dev
@@ -31,6 +30,20 @@ apt install lib64ncurses-dev libclang-dev libopencl-clang-dev librpm-dev
 apt install libparpack2-dev libarpack2-dev liblapack-dev
 apt install python2 
 ```
+Ubuntu 22.04 :
+
+In Root: 
+```sh
+apt install cmake
+add-apt-repository ppa:ubuntuhandbook1/ppa #for Ubuntu 22.04 works for 20.04 also
+apt install qt4-dev-tools libqt4-dev 
+apt install portaudio19-dev/libasound-dev libatlas-base-dev libatlas3-base
+apt install libsuitesparse-dev libfftw3-dev llvm-dev libpcre3-dev libffi-dev
+apt install lib64ncurses-dev libclang-dev libopencl-clang-dev librpm-dev
+apt install libparpack2-dev libarpack2-dev liblapack-dev
+apt install python2 
+```
+
 
 At the moment, LLVM and CLANG do not install correctly in Fedora/Ubuntu.  So
 you will have to build them.  Make a build directory somewhere.
