@@ -26,5 +26,6 @@ yum install cmake
 yum install qt4 qt4-devel portaudio-devel atlas-devel atlas ufsparse-devel fftw-devel llvm-devel pcre-devel
 yum install gcc-c++
 yum install libffi-devel ncurses-devel clang-devel rpm-build
-(this doesn't include VTK).
 ```
+#(this doesn't include VTK).
+
