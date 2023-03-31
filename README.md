@@ -19,7 +19,9 @@ yum install arpack-devel lapack-devel
 (this doesn't include VTK).
 
 Ubuntu:
+
 In Root: 
+
 apt install cmake
 sudo add-apt-repository ppa:rock-core/qt4  #for Ubuntu 20.04
 apt install qt4-dev-tools libqt4-dev 
